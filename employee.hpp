@@ -32,4 +32,34 @@ private:
   int myDeptCode;			//Department code
 };
 
+//Added Code
+class SalariedEmployee : public Employee {
+        public:
+                SalariedEmployee(double salary);        //constructor
+
+                void setSalary(double salary);          //set salary
+                long getSalary();                       //get salary
+                double calSalary(double salary);        //calculate salary
+                void printSalary();                     //print salary information
+        private:
+                double monthlySalary;
+};
+
+class HourlyEmployee : public Employee {
+        public:
+                HourlyEmployee(int hours, double rates, int overtime);  //constructor
+
+                void setHoursWorked(int hours);
+                int getHoursWorked();
+                void setHourlyRate(double rates);
+                double getHourlyRate();
+                void setOvertimeHours(int overtime);
+                int getOvertimeHours();
+                int calcHourlySalary(int hours, int rate, int overtime);
+        private:
+                int HoursWorked;
+                double HourlyRate;
+                int OvertimeHours;
+};
+
 #endif
