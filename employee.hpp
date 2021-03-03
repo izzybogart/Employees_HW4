@@ -35,31 +35,35 @@ private:
 //Added Code
 class SalariedEmployee : public Employee {
         public:
-                SalariedEmployee(double salary);        //constructor
+                SalariedEmployee(double salary, int months);                    //constructor
 
-                void setSalary(double salary);          //set salary
-                long getSalary();                       //get salary
-                double calSalary(double salary);        //calculate salary
-                void printSalary();                     //print salary information
+                void setSalary(double salary);                                  //set salary
+                void setMonths(int months);                                     //set months of year worked
+                double getSalary() const;                                       //get salary
+                int getMonths() const;                                       //get months
+                void calSalary(double salary, int months);        //calculate salary
+                void printSalary();                                             //print salary information
         private:
                 double monthlySalary;
+                double monthsWorked;
 };
 
 class HourlyEmployee : public Employee {
         public:
-                HourlyEmployee(int hours, double rates, int overtime);  //constructor
+                HourlyEmployee(float hours, float rates, float overtime);  //constructor
 
-                void setHoursWorked(int hours);
-                int getHoursWorked();
+                void setHoursWorked(float hours);
+                float getHoursWorked() const;
                 void setHourlyRate(double rates);
-                double getHourlyRate();
-                void setOvertimeHours(int overtime);
-                int getOvertimeHours();
-                int calcHourlySalary(int hours, int rate, int overtime);
+                float getHourlyRate() const;
+                void setOvertimeHours(float overtime);
+                float getOvertimeHours() const;
+                void calcHourlySalary(float hours, float rates, float overtime);
+                void printHourly();
         private:
-                int HoursWorked;
-                double HourlyRate;
-                int OvertimeHours;
+                float HoursWorked;
+                float HourlyRate;
+                float OvertimeHours;
 };
 
 #endif
