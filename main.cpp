@@ -4,33 +4,29 @@
 #include<iostream>
 #include <string>
 #include "employee.hpp"
+#include "SalariedEmployee.hpp"
+#include "HourlyEmployee.hpp"
 
 using namespace std;
 
 int main() {
+        //SalariedEmployee e1 (6000, 12);
         Employee e1 (001, "Jones", "Booker", "T", 22);
+        //SalariedEmployee e2 (3714, 8 );
         Employee e2 (002, "Hendrix", "Jimi", "NMI ", 14);
+        //HourlyEmployee e3 (172, 12.50, 21.50);
         Employee e3 (003, "Morrison", "Jim", "D", 03);
+        //HourlyEmployee e4 (150.50, 12.50, 0);
         Employee e4 (004, "Hadox", "Callie", "N", 03);
 
-        SalariedEmployee Jones (6000, 12);
-        SalariedEmployee Hendrix (3714, 8);
-
-        HourlyEmployee Morrison (172, 12.50, 21.50);
-        HourlyEmployee Hadox (150.5, 12.50, 0);
-
-
         e1.printEmployee();
-        Jones.printSalary();
-        Jones.calSalary(6000, 12);
-        e2.printEmployee();
-        Hendrix.printSalary();
-        Hendrix.calSalary(3714, 8);
-        e3.printEmployee();
-        Morrison.printHourly();
-        Morrison.calcHourlySalary(172, 12.50, 21.50);
-        e4.printEmployee();
-        Hadox.printHourly();
-        Hadox.calcHourlySalary(150.5, 12.50, 0);
-
-}
+/*      e1.printSalary();
+        e1.calcSalary();
+        e2.printSalary();
+        e2.calcSalary();
+        e3.printHourly();
+        e3.calcHourlySalary();
+        e4.printHourly();
+        e4.calcHourlySalary();
+*/
+        return 0;
