@@ -2,7 +2,7 @@
 #include "HourlyEmployee.hpp"
 using namespace std;
 
-HourlyEmployee::HourlyEmployee(doubel hours, double rates, double overtime) {
+HourlyEmployee::HourlyEmployee(double hours, double rates, double overtime) {
         setHoursWorked(hours);
         setHourlyRate(rates);
         setOvertimeHours(overtime);
@@ -38,8 +38,7 @@ void HourlyEmployee::calcHourlySalary() {
 }
 
 void HourlyEmployee::printHourly() {
-        cout<<"Hourly Employee:"<<endl;
-        Employee::printEmployee();
+        cout<<"Hourly Employee"<<endl;
         cout<<"Hours Worked This Month: "<<getHoursWorked()<<endl;
         cout<<"Overtime Hours Worked This Month: "<<getOvertimeHours()<<endl;
         cout<<"Hourly Pay rate: "<<getHourlyRate()<<endl;
