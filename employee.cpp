@@ -93,3 +93,52 @@ void Employee:: printEmployee ()			// print Employee information
 		getMiddleInitial() <<"." << endl;
   cout << "Dept Code: " << getDeptCode () << endl;  
 }
+
+SalariedEmployee::SalariedEmployee(double salary, int months) {
+        monthlySalary = salary;
+        monthsWorked = months;
+}
+
+void SalariedEmployee::setSalary(double salary){
+        monthlySalary = salary;
+}
+
+void SalariedEmployee::setMonths(int months){
+        monthsWorked = months;
+}
+
+double SalariedEmployee::getSalary() const{
+        return monthlySalary;
+}
+
+int SalariedEmployee::getMonths() const{
+        return monthsWorked;
+}
+
+void SalariedEmployee::calSalary(double salary, int months){
+        double yearlySalary = salary*((double)months/12);
+        cout<<"Yearly Salary: "<<fixed<<setprecision(2)<<yearlySalary<<endl;
+}
+
+void SalariedEmployee::printSalary(){
+        cout<<"Monthly Salary: "<<getSalary()<<endl;
+        cout<<"Fraction of the Year Worked: "<<getMonths()<<"/12"<<endl;
+}
+
+HourlyEmployee::HourlyEmployee(float hours, float rates, float overtime){
+        HoursWorked = hours;
+        HourlyRate = rates;
+        OvertimeHours = overtime;
+}
+
+void HourlyEmployee::setHoursWorked(float hours) {
+        HoursWorked = hours;
+}
+
+void HourlyEmployee::setHourlyRate(float rates){
+        HourlyRate = rates;
+}
+
+void HourlyEmployee::setOvertimeHours(float overtime){
+        OvertimeHours = overtime;
+}
