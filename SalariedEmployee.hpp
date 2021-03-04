@@ -1,6 +1,3 @@
-#ifdef SALARIEDEMPLOYEE_H
-#define SALARIEDEMPLOYEE_H
-
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -21,4 +18,3 @@ class SalariedEmployee : public Employee {
                 int monthsWorked;
 };
 
-#endif
