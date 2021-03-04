@@ -15,15 +15,8 @@ using namespace std;
 // constructor
 
 Employee::Employee(long id, const string &last, const string &first, const string &initial,
-		   int dept)
-{
-  myIdNum = id;
-  myLastName = last;
-  myFirstName = first;
-  myMiddleInitial = initial;
-  myDeptCode = dept;
-}
-
+                   int dept)
+        : myIdNum(id),myLastName(last),myFirstName(first),myMiddleInitial(initial),myDeptCode(dept){}
 // Accessor function defintions
 
 void Employee::setIdNum (const long  id)
