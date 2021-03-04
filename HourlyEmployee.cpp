@@ -33,7 +33,7 @@ double HourlyEmployee::getOvertimeHours() {
 }
 
 void HourlyEmployee::calcHourlySalary() {
-        double yearlySalary = (getHoursWorked() * getHourlyRate()) + (1.5 * getOvertimeHours() * getHourlyRate()) * 12;
+        double yearlySalary = ((getHoursWorked() * getHourlyRate()) + (1.5 * getOvertimeHours() * getHourlyRate())) * 12;
         cout<<"Estimated Yearly Salary: "<<fixed<<setprecision(2)<<yearlySalary<<endl;
 }
 
