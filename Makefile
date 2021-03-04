@@ -2,13 +2,13 @@ IDIR = ../include
 CC = g++
 CFLAGS = -I$(IDIR)
 
-ODIR = obj
+ODIR = ../obj
 LDIR = ../lib
 
 LIBS = -lm
 
 _DEPS = employee.hpp HourlyEmployee.hpp SalariedEmployee.hpp
-DEPS := $(patsubst %,$(IDIR)/%,$(DEPS))
+DEPS := $(patsubst %,$(IDIR)/%,$(_DEPS))
 
 _OBJ = main.o employee.o HourlyEmployee.o SalariedEmployee.o
 OBJ = $(patsubst &,$(ODIR)/%,$(_OBJ))
@@ -17,7 +17,7 @@ $(ODIR)/%.o: %.cpp $(DEPS)
         $(CC) -cpp -o $@ $< $(CFLAGS)
 
 main: $(OBJ)
-        $(CC) -o $A $^ $(CFLAGS) $(LIBS)
+        $(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 .PHONY: clean
 
