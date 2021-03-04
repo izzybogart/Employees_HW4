@@ -142,3 +142,26 @@ void HourlyEmployee::setHourlyRate(float rates){
 void HourlyEmployee::setOvertimeHours(float overtime){
         OvertimeHours = overtime;
 }
+
+float HourlyEmployee::getHoursWorked() const {
+        return HoursWorked;
+}
+
+float HourlyEmployee::getHourlyRate() const {
+        return HourlyRate;
+}
+
+float HourlyEmployee::getOvertimeHours() const {
+        return OvertimeHours;
+}
+
+void HourlyEmployee::calcHourlySalary(float hours, float rates, float overtime){
+        float yearlySalary = (hours*rates) +(1.5*rates*overtime);
+        cout<<"Estimated Yearly Salary: "<<fixed<<setprecision(2)<<yearlySalary<<endl;
+}
+
+void HourlyEmployee::printHourly(){
+        cout<<"Hours Worked this Month: "<<getHoursWorked()<<endl;
+        cout<<"Overtime Hours Worked this Month: "<<getOvertimeHours()<<endl;
+        cout<<"Hourly Rate: "<<getHourlyRates()<<endl;
+}
