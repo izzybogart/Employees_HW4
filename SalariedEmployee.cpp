@@ -15,11 +15,11 @@ void SalariedEmployee::setMonths(int months) {
         monthsWorked = months;
 }
 
-double SalariedEmployee::getSalary() {
+double SalariedEmployee::getSalary() const {
         return monthlySalary;
 }
 
-int SalariedEmployee::getMonths() {
+int SalariedEmployee::getMonths() const {
         return monthsWorked;
 }
 
@@ -30,7 +30,6 @@ void SalariedEmployee::calcSalary() {
 
 void SalariedEmployee::printSalary() {
         cout<<"Salaried employee"<<endl;
-        Employee::printEmployee();
         cout<<"Monthly Salary: "<<getSalary()<<endl;
         cout<<"Months of the Year Worked: "<<getMonths()<<"/12"<<endl;
 }
