@@ -1,3 +1,6 @@
+#ifndef HOURLYEMPLOYEE
+#define HOURLYEMPLOYEE
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -24,3 +27,4 @@ class HourlyEmployee : public Employee {
                 double OvertimeHours;
 };
 
+#endif
