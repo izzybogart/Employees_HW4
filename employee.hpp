@@ -32,38 +32,4 @@ private:
   int myDeptCode;			//Department code
 };
 
-//Added Code
-class SalariedEmployee : public Employee {
-        public:
-                SalariedEmployee(double salary, int months);                    //constructor
-
-                void setSalary(double salary);                                  //set salary
-                void setMonths(int months);                                     //set months of year worked
-                double getSalary() const;                                       //get salary
-                int getMonths() const;                                       //get months
-                void calSalary(double salary, int months);        //calculate salary
-                void printSalary();                                             //print salary information
-        private:
-                double monthlySalary;
-                double monthsWorked;
-};
-
-class HourlyEmployee : public Employee {
-        public:
-                HourlyEmployee(float hours, float rates, float overtime);  //constructor
-
-                void setHoursWorked(float hours);
-                float getHoursWorked() const;
-                void setHourlyRate(double rates);
-                float getHourlyRate() const;
-                void setOvertimeHours(float overtime);
-                float getOvertimeHours() const;
-                void calcHourlySalary(float hours, float rates, float overtime);
-                void printHourly();
-        private:
-                float HoursWorked;
-                float HourlyRate;
-                float OvertimeHours;
-};
-
 #endif
