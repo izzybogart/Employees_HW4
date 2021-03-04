@@ -1,3 +1,6 @@
+#ifndef SALARIEDEMPLOYEE
+#define SALARIEDEMPLOYEE
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -17,4 +20,6 @@ class SalariedEmployee : public Employee {
                 double monthlySalary;
                 int monthsWorked;
 };
+
+#endif
 
