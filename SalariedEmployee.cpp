@@ -2,7 +2,7 @@
 #include "SalariedEmployee.hpp"
 using namespace std;
 
-SalariedEmployee::SalariedEmployee(double salary, int months) : Employee(id, last, first, initial, dept) {
+SalariedEmployee::SalariedEmployee(double salary, int months) {
         setSalary(salary);
         setMonths(months);
 }
