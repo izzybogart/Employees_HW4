@@ -2,7 +2,7 @@
 #include "HourlyEmployee.hpp"
 using namespace std;
 
-HourlyEmployee::HourlyEmployee(doubel hours, double rates, double overtime) : Employee(id, last, first, initial, dept) {
+HourlyEmployee::HourlyEmployee(doubel hours, double rates, double overtime) {
         setHoursWorked(hours);
         setHourlyRate(rates);
         setOvertimeHours(overtime);
